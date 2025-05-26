@@ -4,12 +4,12 @@ Practice work on SQL, solving Netflix business questions with SQL
 
 ![Netflix logo]([images/.png](https://github.com/MiebiB/15-business-questions-using-SQL/blob/main/perchE-netflix-disney-aumentato-prezzi-italiani-pagheranno-33-piU-v3-666390.jpg))
 
-<h2>🔍 Overview</h2>
+<h2>Overview</h2>
 <p>
 This project explores Netflix’s content dataset to derive actionable business insights using SQL. By addressing key business questions, I aimed to optimize decision-making for content acquisition, user targeting, and platform engagement.
 </p>
 
-<h2>🎯 Objectives</h2>
+<h2>Objectives</h2>
 <ul>
   <li>Evaluate Netflix's content distribution and trends over time.</li>
   <li>Identify valuable genres, countries, and talent (directors/actors).</li>
@@ -17,10 +17,84 @@ This project explores Netflix’s content dataset to derive actionable business 
   <li>Drive strategic decisions through data-driven insights.</li>
 </ul>
 
-<h2>🗂️ Schema</h2>
-<p><em>Note: This section will be updated with the full schema diagram or explanation.</em></p>
+<h2>Dataset Schema</h2>
 
-<h2>📌 Business Problems & Solutions (SQL)</h2>
+<p>This project uses a dataset from <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">Kaggle - Netflix Shows</a>, which contains metadata on the content available on Netflix as of the dataset's collection date. Below is a breakdown of the schema used:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>show_id</code></td>
+      <td>String</td>
+      <td>Unique identifier for each title.</td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td>String</td>
+      <td>Specifies whether the content is a Movie or a TV Show.</td>
+    </tr>
+    <tr>
+      <td><code>title</code></td>
+      <td>String</td>
+      <td>Name of the title.</td>
+    </tr>
+    <tr>
+      <td><code>director</code></td>
+      <td>String</td>
+      <td>Name(s) of the director(s) (if available).</td>
+    </tr>
+    <tr>
+      <td><code>cast</code></td>
+      <td>String</td>
+      <td>List of main actors and actresses featured in the content.</td>
+    </tr>
+    <tr>
+      <td><code>country</code></td>
+      <td>String</td>
+      <td>Country or countries where the content was produced.</td>
+    </tr>
+    <tr>
+      <td><code>date_added</code></td>
+      <td>Date</td>
+      <td>Date the content was added to Netflix.</td>
+    </tr>
+    <tr>
+      <td><code>release_year</code></td>
+      <td>Integer</td>
+      <td>Year the content was originally released.</td>
+    </tr>
+    <tr>
+      <td><code>rating</code></td>
+      <td>String</td>
+      <td>Content rating (e.g., TV-MA, PG, R, etc.).</td>
+    </tr>
+    <tr>
+      <td><code>duration</code></td>
+      <td>String</td>
+      <td>Duration of the movie or number of seasons for TV Shows.</td>
+    </tr>
+    <tr>
+      <td><code>listed_in</code></td>
+      <td>String</td>
+      <td>Genres or categories the content falls under.</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+      <td>A short summary or description of the content.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Business Problems & Solutions (SQL)</h2>
 
 <ol>
   <li>
